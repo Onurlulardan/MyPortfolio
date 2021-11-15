@@ -20,6 +20,7 @@
   --font-color: var(--dark-font-color);
   --background: var(--dark-bg-color);
   --foreground: var(--dark-fg-color);
+  transition: 0.5s all ease-in-out;
 }
 html,
 body {
@@ -206,4 +207,78 @@ hr {
 .about-text p a u {
   text-decoration: none;
   color: var(--font-color);
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  margin: 3px 0px;
+  background-color: var(--font-color);
+}
+.navlist-mob {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .navlist ul li a {
+    font-size: 16px;
+  }
+  .navlogo a {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  .navlist ul {
+    display: none;
+  }
+  .navlist-mob {
+    display: flex;
+    position: fixed;
+    margin-top: 150px;
+    width: 50%;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    color: var(--font-color);
+    transform: translateX(100%);
+    transition: 0.5s ease all;
+    background-color: var(--background);
+    z-index: 9999;
+  }
+  .navlist-mob li a {
+    font-size: 22px;
+    color: var(--font-color);
+    font-weight: 700;
+    line-height: 60px;
+  }
+  .show {
+    transform: translateX(0px);
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-text {
+    margin-top: 100px;
+  }
+  .about-text p {
+    width: 300px;
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 425px) {
+  nav {
+    margin: 0px 0px;
+  }
 }

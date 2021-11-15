@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onur Altuntaş</title>
+    <title>Blog</title>
     <!--Goggle Fonts Poppins-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
+        <nav>
                 <div class=" navlogo">
                     <a href="index.html">@onuraltuntas</a>
                 </div>
@@ -40,8 +40,8 @@
                         <div></div>
                     </div>
                 </div>
-    </nav>
-    <div class="navlist-mob">
+        </nav>
+        <div class="navlist-mob">
         <ul>
             <li><a href="index.html">Anasayfa</a></li>
             <li><a href="about.html">Hakkımda</a></li>
@@ -49,50 +49,9 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">İletişim</a></li>
         </ul>
-    </div>
-    <section class="content-mid">
-            <div class="me-img">
-                <img src="img/pixel-art.gif">
-            </div>
-            <div class="text-cover">
-                <div id="text"></div>
-                <p>Front-End Developer <span class="ada"> @adadijital </span></p>
-            </div>
-            <div class="social-list">
-                <hr>
-                <ul>
-                    <li> <a href="https://twitter.com/karanoyann" target="_blank"> <i class="fab fa-twitter"></i> </a> </li>
-                    <li> <a href="https://github.com/Onurlulardan" target="_blank"> <i class="fab fa-github"></i> </a> </li>
-                    <li> <a href="https://www.linkedin.com/in/onur-altunta%C5%9F-297692180/" target="_blank"> <i class="fab fa-linkedin"></i> </a> </li>
-                    <li> <a href="https://www.instagram.com/onurlulardan/" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
-                </ul>
-            </div>
-            <div class="language">
-                <div class="lang-toggler-wrap">
-                    <input type="checkbox" class="checkbox" id="lang-mode-toggler">
-                    <label for="lang-mode-toggler" class="label">
-                        <i class="tr"><img src="img/turkey.png"></i>
-                        <i class="en"><img src="img/united-states.png"></i>
-                        <div class="ball"></div>
-                    </label>
-                </div>
-            </div>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        </div>
+
     <script src="script.js"></script>
-    <script>
-        let i=0;
-        let text;
-        text = "Merhaba, Ben Onur...";
-        function typeWriter() {
-        if (i < text.length) {
-            document.getElementById("text").innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-        };
-        typeWriter();
-    </script>
+
 </body>
 </html>

@@ -22,18 +22,18 @@ darkModeToggler.addEventListener("change", () => {
     if (darkMode !== "enable") enableDarkMode(); 
     else disableDarkMode();
 });
+// Hamburger Menu
+const navbar = document.querySelector(".navlist-mob");
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
 //type effect
-let i=0;
-let text;
-text = "Merhaba, Ben Onur...";
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("text").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 50);
-  }
-};
-typeWriter();
+
+
+
+
 // language
 // $(document).ready(function(){
     
