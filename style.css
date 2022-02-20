@@ -228,6 +228,7 @@ hr {
   height: 3px;
   margin: 3px 0px;
   background-color: var(--font-color);
+  z-index: 999999;
 }
 .navlist-mob {
   display: none;
@@ -296,6 +297,7 @@ hr {
 .contact-cover > ul li > p {
   margin-bottom: 10px;
   color: var(--font-color);
+  padding: 0px 10px;
 }
 .cv-cover {
   display: flex;
@@ -346,7 +348,7 @@ hr {
   .navlist-mob {
     display: flex;
     position: fixed;
-    margin-top: 150px;
+    padding-top: 150px;
     width: 50%;
     top: 0;
     right: 0;
@@ -380,6 +382,7 @@ hr {
     width: 300px;
     padding-left: 0px;
     min-height: 550px;
+    padding-bottom: 50px;
   }
   #text {
     margin-left: 0px;
