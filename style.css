@@ -188,6 +188,7 @@ hr {
   justify-content: flex-start;
   align-items: center;
   margin-left: 50px;
+  margin-top: 50px;
 }
 /* about page */
 .about-container {
@@ -290,9 +291,11 @@ hr {
 }
 .contact-cover > label {
   margin-bottom: 30px;
+  color: var(--font-color);
 }
 .contact-cover > ul li > p {
   margin-bottom: 10px;
+  color: var(--font-color);
 }
 .cv-cover {
   display: flex;
@@ -368,6 +371,7 @@ hr {
   .about-container {
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
   }
   .about-text {
     margin-top: 50px;
