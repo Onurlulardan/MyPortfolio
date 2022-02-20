@@ -22,12 +22,17 @@
   --foreground: var(--dark-fg-color);
   transition: 0.5s all ease-in-out;
 }
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@font-face {
+  font-family: "Mono";
+  src: url("/Fonts/VCR_OSD_MONO_1.001.ttf");
+}
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-size: 16px;
-  height: 100vh;
   background-color: var(--background);
+  height: 100%;
 }
 ul,
 li,
@@ -45,11 +50,12 @@ nav {
   margin: 0px 70px;
 }
 .navlogo a {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 60px;
   color: var(--font-color);
   margin-top: 10px;
+  font-family: "Mono", sans-serif;
 }
 .navlogo a:hover {
   opacity: 0.7;
@@ -68,7 +74,7 @@ nav {
 }
 .navlist ul li a {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   color: var(--font-color);
   font-weight: 700;
   line-height: 60px;
@@ -126,10 +132,12 @@ i {
 #text {
   font-size: 48px;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Mono", sans-serif;
+  /* font-family: "Roboto Mono", monospace; */
   color: var(--font-color);
   font-weight: 500;
   text-transform: uppercase;
+  margin-left: 70px;
 }
 .text-cover p {
   text-align: center;
@@ -184,6 +192,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 120px;
 }
 .about-img,
 .about-text {
@@ -201,7 +210,7 @@ hr {
   width: 500px;
   padding-left: 50px;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 35px;
   text-align: center;
 }
 .about-text p a u {
@@ -223,12 +232,110 @@ hr {
 .navlist-mob {
   display: none;
 }
+.skillspage-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-flow: wrap;
+  margin-top: -120px;
+}
+.skills-content {
+  position: relative;
+}
+.skills-content > ul li > p {
+  padding-left: 10px;
+}
+.first {
+  width: 600px;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("img/blob.svg");
+}
+.second {
+  width: 800px;
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("img/blob2.svg");
+}
+
+.third {
+  width: 600px;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("img/blob3.svg");
+  margin-top: -350px;
+  margin-left: -70px;
+}
+.first > ul {
+  margin-left: 30px;
+}
+.third > ul {
+  margin-top: 80px;
+}
+.skills-content > ul {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.contact-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+.contact-cover > label {
+  margin-bottom: 30px;
+}
+.contact-cover > ul li > p {
+  margin-bottom: 10px;
+}
+.cv-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cv-cover a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--font-color);
+}
+.cv-cover a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.3s;
+}
+.cv-cover a:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  .about-container {
+    margin-top: 0px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .navlist ul li a {
     font-size: 16px;
   }
   .navlogo a {
     font-size: 26px;
+  }
+  .second {
+    margin-top: -250px;
+  }
+  .third {
+    margin-top: -250px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -268,6 +375,7 @@ hr {
   .about-container {
     display: flex;
     flex-direction: column;
+    margin-top: 0px;
   }
   .about-text {
     margin-top: 50px;
@@ -276,9 +384,44 @@ hr {
     width: 300px;
     padding-left: 0px;
   }
+  #text {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .second {
+    margin-left: -140px;
+  }
+  .second > ul {
+    margin-left: 30px;
+  }
 }
 @media screen and (max-width: 425px) {
   nav {
     margin: 0px 0px;
+  }
+  .second {
+    margin-left: -200px;
+  }
+  .second > ul {
+    margin-left: 125px;
+    margin-top: -40px;
+  }
+  .first {
+    margin-left: -120px;
+  }
+  .third {
+    margin-left: -120px;
+  }
+  .contact-cover > img {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .third > ul {
+    margin-left: 40px;
+  }
+  .first > ul {
+    margin-left: 60px;
   }
 }
