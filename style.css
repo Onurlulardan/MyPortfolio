@@ -32,7 +32,6 @@ body {
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
   background-color: var(--background);
-  height: 100%;
 }
 ul,
 li,
@@ -118,6 +117,7 @@ i {
 }
 .content-mid {
   position: relative;
+  height: 100vh;
 }
 .me-img {
   display: flex;
@@ -183,21 +183,20 @@ hr {
   width: 15px;
   height: 15px;
 }
-.lang-toggler-wrap {
+.language {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-left: 50px;
-  margin-top: 100px;
 }
 /* about page */
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
+  height: 100vh;
 }
-.about-img,
-.about-text {
-  margin-top: 150px;
-}
+
 .about-img img {
   width: 300px;
   height: 300px;
@@ -238,7 +237,7 @@ hr {
   align-items: center;
   width: 100%;
   flex-flow: wrap;
-  margin-top: -120px;
+  /* margin-top: -120px; */
 }
 .skills-content {
   position: relative;
@@ -287,7 +286,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 100vh;
 }
 .contact-cover > label {
   margin-bottom: 30px;
@@ -316,12 +315,6 @@ hr {
 }
 .cv-cover a:hover::after {
   width: 100%;
-}
-
-@media screen and (max-width: 1440px) {
-  .about-container {
-    margin-top: 0px;
-  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -375,7 +368,6 @@ hr {
   .about-container {
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
   }
   .about-text {
     margin-top: 50px;
@@ -383,6 +375,7 @@ hr {
   .about-text p {
     width: 300px;
     padding-left: 0px;
+    min-height: 550px;
   }
   #text {
     margin-left: 0px;
