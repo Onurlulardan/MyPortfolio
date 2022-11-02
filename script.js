@@ -31,7 +31,36 @@ hamburger.addEventListener("click", () => {
 });
 //type effect
 
+const endDate = new Date("May 7, 2023 12:00:00").getTime();
 
+ 
+const timer = setInterval(function() {
+ 
+    let now = new Date().getTime();
+    let t = endDate - now;
+
+    if(t >= 0) {
+        let days = Math.floor(t / (1000 * 60 * 60 *24));
+        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+        document.getElementById("timer-gunler").innerHTML = days + 
+        "<span class='timer-label'> gün</span>";
+
+        document.getElementById("timer-saatler").innerHTML= ("0" + hours).slice(-2) +
+        "<span class='timer-label'> saat</span>";
+
+        document.getElementById("timer-dakikalar").innerHTML= ("0" + minutes).slice(-2) +
+        "<span class='timer-label'> dk</span>";
+
+        document.getElementById("timer-saniyeler").innerHTML= ("0" + seconds).slice(-2) +
+        "<span class='timer-label'> sn</span>";
+
+    } else {
+        document.getElementById("timer").innerHTML = "Zaman bitti!";
+    }
+}, 1000);
 
 
 // language

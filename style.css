@@ -426,3 +426,31 @@ hr {
     margin-left: 60px;
   }
 }
+.timer-header {
+  font-family: "Mono", sans-serif;
+  font-size: 35px;
+  color: var(--font-color);
+}
+#timer {
+  color: var(--font-color);
+  font-size: 4rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Mono", sans-serif;
+}
+#timer > span {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 100%;
+ padding-right: 40px;
+}
+.timer-label {
+  font-size: 2.5rem;
+  padding-left: 0.25rem;
+  padding-left: 10px;
+  margin-right: 50px;
+  background-color: transparent;
+}
